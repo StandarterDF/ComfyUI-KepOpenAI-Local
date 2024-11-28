@@ -38,6 +38,7 @@ class ImageWithPrompt:
         self, Image: torch.Tensor, prompt: str, max_tokens: int
     ) -> Tuple[str]:
         b64image = image.pil2base64(image.tensor2pil(Image))
+        print(b64image) 
         response = self.open_ai_client.chat.completions.create(
             model="LoadedModel",
             max_tokens=max_tokens,
@@ -45,10 +46,19 @@ class ImageWithPrompt:
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": prompt},
+                        {
+                            "type": "text", 
+                            "text": prompt
+                        },
                         {
                             "type": "image_url",
+<<<<<<< HEAD
                             "image_url": {"url": f"data:image/png;base64,{b64image}"},
+=======
+                            "image_url": {
+                                "url": f"data:image/png;base64,{b64image}"
+                            },
+>>>>>>> 5c7d0b3022937be862d0bed34a09e85fab4f7689
                         },
                     ],
                 }
