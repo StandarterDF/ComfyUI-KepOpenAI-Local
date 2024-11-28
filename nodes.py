@@ -52,13 +52,10 @@ class ImageWithPrompt:
                         },
                         {
                             "type": "image_url",
-<<<<<<< HEAD
                             "image_url": {"url": f"data:image/png;base64,{b64image}"},
-=======
                             "image_url": {
                                 "url": f"data:image/png;base64,{b64image}"
                             },
->>>>>>> 5c7d0b3022937be862d0bed34a09e85fab4f7689
                         },
                     ],
                 }
