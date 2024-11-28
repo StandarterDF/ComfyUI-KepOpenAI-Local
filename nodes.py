@@ -46,8 +46,10 @@ class ImageWithPrompt:
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", 
-                         "text": prompt},
+                        {
+                            "type": "text", 
+                            "text": prompt
+                        },
                         {
                             "type": "image_url",
                             "image_url": {"url": f"data:image/png;base64,{b64image}"},
