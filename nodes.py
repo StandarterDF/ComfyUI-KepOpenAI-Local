@@ -30,7 +30,8 @@ class ImageWithPrompt:
 
     def __init__(self):
         self.open_ai_client: OpenAIClient = OpenAIClient(
-            api_key=credentials.get_open_ai_api_key()
+            api_key="LM-Studio",
+            base_url="http://192.168.0.124:1234/v1"
         )
 
     def generate_completion(
